@@ -4,7 +4,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 >
 
-<xsl:output method="html" indent="no" encoding="ISO-8859-1"/>
+<xsl:output method="html" indent="no" encoding="UTF-8"/>
 <xsl:param name="context"/>
 <xsl:param name="renderId"/>
 <xsl:param name="token"/>
