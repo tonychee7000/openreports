@@ -10,7 +10,7 @@
     <AuthenticationMode>Unauthenticated</AuthenticationMode>
     <Catalogs>
         <Catalog name="SampleData">
-			<Definition>c:\openreports-tomcat\reports\SampleData.mondrian.xml</Definition>
+			<Definition>../reports/SampleData.mondrian.xml</Definition>
 		</Catalog>
     </Catalogs>
   </DataSource>

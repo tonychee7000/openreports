@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <br>
@@ -11,7 +12,7 @@
     <tr>
       <td>
       <div id="footer" align="center">
-        <small><strong>OpenReports</strong>  Copyright &#169; 2002-2007 All Rights Reserved.</small>
+        <small><strong>ReburnBI</strong>  Copyright &#169; 2016 All Rights Reserved.</small>
         </div>
       </td>
     </tr>

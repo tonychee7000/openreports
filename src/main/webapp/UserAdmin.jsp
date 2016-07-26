@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <s:include value="Banner.jsp" />
@@ -18,56 +19,82 @@
 
 <br/>
 
-<div id="userAdminReportTabs" class="yui-navset" style="width: 800px;">
-  <ul class="yui-nav">
-    <li class="selected"><a href="preferences"><em><s:text name="userAdmin.preferences"/></em></a></li>
-    <s:if test="user.alertUser">    
-    <li><a href="alerts"><em><s:text name="userAdmin.alerts"/></em></a></li>
+<div class="panel panel-default" style="width: 800px;">
+<div id="userAdminReportTabs" class="panel-body" >
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    	<a href="#preferences" aria-controls="preferences" role="tab" data-toggle="tab">
+    		<em>
+    			<s:text name="userAdmin.preferences"/>
+    		</em>
+    	</a>
+    </li>
+    <s:if test="user.alertUser">
+    <li role="presentation">
+    	<a href="#alerts" aria-controls="alerts" role="tab" data-toggle="tab">
+    		<em>
+    			<s:text name="userAdmin.alerts"/>
+    		</em>
+    	</a>
+    </li>
     </s:if>
   </ul>            
-  <div class="yui-content">
+  <div class="tab-content">
   
-    <div id="preferences"> 
+    <div id="preferences" role="tabpanel" class="tab-pane active"> 
   
     <form action="userAdmin.action">
-  
-    <table class="dialog">
-      <tr class="a">
-        <td class="boldText"><s:text name="label.username"/></td>
-        <td><input type="text" size="60" name="name" value="<s:property value="name"/>"></td>
-      </tr>
-      <tr class="b">
-        <td class="boldText"><s:text name="label.password"/></td>
-        <td><input type="password" size="60" name="password" value="<s:property value="password"/>"></td>
-      </tr>    
-      <tr class="a">
-        <td class="boldText"><s:text name="label.confirmPassword"/></td>
-        <td><input type="password" size="60" name="passwordConfirm" value="<s:property value="passwordConfirm"/>"></td>
-      </tr>      
-      <tr class="b">
-        <td class="boldText"><s:text name="label.email"/></td>
-        <td><input type="text" size="60" name="email" value="<s:property value="email"/>"></td>
-      </tr>  
-      <s:if test="#session.user.dashboardUser">  
-      <tr>
-    	<td class="boldText"><s:text name="label.dashboardReport"/></td>
-    	<td>
-   	     <select name="reportId">    
-   	      <option value="-1">(None)</option>     
-          <s:iterator id="report" value="reports">
-           <option value="<s:property value="id"/>" <s:if test="id == reportId">selected="selected"</s:if> /><s:property value="name"/>
-          </s:iterator>
-        </select>   	    
-   	   </td>  
-   	  </tr>
-   	  </s:if>  	    
-      <tr>
-        <td align="center" class="dialogButtons" colspan="2">
-        <hr>       
-      	<input class="standardButton" type="submit" name="submitType" value="<s:text name="button.save"/>">       
-        </td>
-      </tr>   
-    </table>
+   		<div class="form-group input-group"></div>
+    	<div class="form-group input-group">
+    		<span class="input-group-addon">
+  				<i class="fa fa-user fa-fw"></i>
+  			</span>
+  			<input type="text" size="60" name="name" class="form-control" 
+  				value="<s:property value="name"/>" 
+  				placeholder="<s:text name="label.username"/>">
+    	</div>
+    	<div class="form-group input-group">
+    		<span class="input-group-addon">
+  				<i class="fa fa-key fa-fw"></i>
+  			</span>
+  			<input type="password" size="60" name="password" class="form-control"
+  				value="<s:property value="password"/>"
+  				placeholder="<s:text name="label.password"/>">
+    	</div>
+      	<div class="form-group input-group">
+    		<span class="input-group-addon">
+  				<i class="fa fa-check fa-fw"></i>
+  			</span>
+  			<input type="password" size="60" name="passwordConfirm" class="form-control"
+  				value="<s:property value="passwordConfirm"/>"
+  				placeholder="<s:text name="label.confirmPassword"/>">
+    	</div>
+    	<div class="form-group input-group">
+    		<span class="input-group-addon">
+  				<i class="fa fa-envelope fa-fw"></i>
+  			</span>
+  			<input type="text" size="60" name="email" class="form-control"
+  				value="<s:property value="email"/>"
+  				placeholder="<s:text name="label.email"/>"
+  				>
+    	</div>
+    	<s:if test="#session.user.dashboardUser">  
+    	    <div class="form-group input-group">
+    	    	<span class="input-group-addon">
+  					<i class="fa fa-dashboard fa-fw"></i>
+  				</span>
+  				<select name="reportId">    
+    	    		<option disabled="disabled"><s:text name="label.dashboardReport"/></option>
+   	      			<option value="-1">(None)</option>     
+          			<s:iterator id="report" value="reports">
+           				<option value="<s:property value="id"/>" <s:if test="id == reportId">selected="selected"</s:if> /><s:property value="name"/>
+          			</s:iterator>
+        		</select>
+    	    </div>
+   	  	</s:if>  
+    	<div class="form-group input-group">
+    		<input class="btn btn-primary" type="submit" name="submitType" value="<s:text name="button.save"/>">  
+    	</div>   	  	
     
     </form>  
     
@@ -75,8 +102,9 @@
   
     <s:if test="user.alertUser">   
   
-    <div id="alerts"> 
-  
+    <div id="alerts" role="tabpanel" class="tab-pane"> 
+    	<div class="form-group input-group"></div>
+    	<div class="form-group input-group"></div>
     <table class="dialog">
       <tr>
         <td class="boldText" colspan="2"><s:text name="label.alert"/></td>
@@ -163,6 +191,7 @@
   
   </div>
   
+</div>
 </div>
  
 <s:include value="Footer.jsp" />

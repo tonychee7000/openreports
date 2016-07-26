@@ -1,7 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 
 <head>
   <meta HTTP-EQUIV="Pragma" CONTENT="public">
@@ -31,18 +32,20 @@
   <link rel="stylesheet" type="text/css" href="bower/bootstrap/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="bower/font-awesome/css/font-awesome.min.css"/>
   <!-- END Bower Dependencies -->
+  
   <script type="text/javascript" src="js/highlight.js"></script>
+  <script type="text/javascript" src="js/openreports.js"></script>
 </head>
 
-<body class="yui-skin-sam">
+<body>
 
 <s:if test="report == null || !report.isDisplayInline()">
 
-<div class="menu"> 
+<nav class="navbar navbar-default navbar-static-top"> 
 
 	<div>
 		<ul class="vert">			
-			<li class="logo">			  
+			<li class="navbar-brand">			  
 				<s:text name="application.title"/>			
 			</li>                     
 		</ul>
@@ -52,53 +55,38 @@
   		<ul class="vert">   	
   		  <s:if test="#session.user">	 
           <li>
-          	<span id="logoffButton" class="yui-button yui-link-button"> 
-	    		<span class="first-child"> 
-          			<a href="logout.action"><s:text name="banner.logoff"/></a>
-          		</span>
-          	</span>                   
+          	<button class="btn" id="btn-logout">
+          		<s:text name="banner.logoff"/>
+          	</button>
           </li>         
           <li>
-            <span id="userAdminButton" class="yui-button yui-link-button <s:if test="#session.breadcrumbs.startsWith('userAdmin')">yui-button-hover yui-link-button-hover</s:if>"> 
-	    		<span class="first-child"> 
-          			<a href="userAdmin.action">
-          				<s:text name="banner.preferences"/>
-          			</a>
-          		</span>
-          	</span>             
+          	<button class="btn
+          		<s:if test="#session.breadcrumbs.startsWith('userAdmin')">btn-primary</s:if>" id="btn-userAdmin">
+          		<s:text name="banner.preferences"/>
+          	</button>             
           </li> 
           </s:if>
           <s:if test="#session.user.adminUser">
           	<li>
-          		<span id="adminButton" class="yui-button yui-link-button <s:if test="#session.breadcrumbs.startsWith('reportAdmin')">yui-button-hover yui-link-button-hover</s:if>"> 
-	    			<span class="first-child"> 
-            			<a  href="reportAdmin.action">
-            				<s:text name="banner.administration"/>
-            			</a>
-            		</span>
-            	</span>
+          		<button class="btn
+          		<s:if test="#session.breadcrumbs.startsWith('reportAdmin')">btn-primary</s:if>" id="btn-admin">
+          		<s:text name="banner.administration"/>
+          		</button>
             </li>
           </s:if>  
           <s:if test="#session.user.scheduler">
           <li>
-          	<span id="schedulerButton" class="yui-button yui-link-button <s:if test="#session.breadcrumbs.startsWith('listScheduledReports')">yui-button-hover yui-link-button-hover</s:if>"> 
-	    		<span class="first-child"> 
-          			<a href="listScheduledReports.action">
-          				<s:text name="banner.scheduledReports"/>
-          			</a>
-          		</span>
-          	</span> 
+          	<button class="btn
+          	<s:if test="#session.breadcrumbs.startsWith('listScheduledReports')">btn-primary</s:if>" id="btn-scheduler">
+          	<s:text name="banner.scheduledReports"/>
+          	</button>
           </li> 
           </s:if>
           <s:if test="#session.user">
           <li>
-          	<span id="reportsButton" class="yui-button yui-link-button <s:if test="#session.breadcrumbs.startsWith('reportGroup')">yui-button-hover yui-link-button-hover</s:if>"> 
-	    		<span class="first-child"> 
-          			<a href="reportGroup.action">
-          				<s:text name="banner.reports"/>
-          			</a>
-          		</span>
-          	</span> 
+          	<button class="btn
+          	<s:if test="#session.breadcrumbs.startsWith('reportGroup')">btn-primary</s:if>" id="btn-reports">
+          	<s:text name="banner.reports"/>
           </li>
           </s:if>
           <s:if test="#session.user.dashboardUser">
@@ -116,15 +104,6 @@
     </div>
     </s:if>    
     
-</div> 
-
-<script type="text/javascript">
-	var menuButton1 = new YAHOO.widget.Button("logoffButton");
-	var menuButton2 = new YAHOO.widget.Button("reportsButton");
-	var menuButton3 = new YAHOO.widget.Button("adminButton");
-	var menuButton4 = new YAHOO.widget.Button("dashboardButton");
-	var menuButton4 = new YAHOO.widget.Button("schedulerButton");
-	var menuButton4 = new YAHOO.widget.Button("userAdminButton");
-</script>    
+</nav> 
 
 </s:if>

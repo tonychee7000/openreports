@@ -8,17 +8,6 @@ body {
 	width: 100%;	
 	text-align: center;		
 }
-
-a {			
-	font-size: 14px;
-	font-weight: bold;	
-	text-decoration: none;
-	color:black;		
-}
-
-a:hover {		
-	border-bottom: 2px solid;	
-}
 	
 .dialog-form {		
 	margin:0;	
@@ -28,22 +17,6 @@ a:hover {
 
 ul {
 	list-style: none;
-}
-
-.logo{
-	color: white;
-	font-size: 18px;
-	font-weight: bold;	
-	padding-left: 8px;
-	padding-top: 8px;	
-	letter-spacing: 1px;
-}
-
-.menu {		
-	height: 38px;
-	background: url(../images/menu-gradient.jpg) 0 0 repeat-x;	 
-	border-bottom: 2px solid;		
-	border-top: 1px solid;	
 }
 
 .important {
@@ -228,6 +201,7 @@ table.displaytag th.order2 a {
 #usermenu li {
 	float: right;
 	white-space: nowrap;	
+	padding-left: 2px;
 }
 
 table.adminMenu th
@@ -318,4 +292,8 @@ table.adminMenu td
 
 .img-reload {
 	background:url(../images/reload.gif) no-repeat 0px 0px;
+}
+
+.login-panel {
+	margin-top: 10%;
 }
