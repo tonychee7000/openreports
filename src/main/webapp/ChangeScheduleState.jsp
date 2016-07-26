@@ -22,11 +22,11 @@
     </tr>   
     <tr class="b">
       <td class="boldText" width="20%"><s:text name="label.startDate"/></td>
-      <td><s:property value="startDate"/></>
+      <td><s:property value="startDate"/></s>
     </tr>
     <tr class="a">
       <td class="boldText" width="20%"><s:text name="label.scheduleType"/></td>
-      <td><s:property value="scheduleTypeName"/></>
+      <td><s:property value="scheduleTypeName"/></s>
     </tr>
      <tr >
       <td class="boldText" width="20%"><s:text name="label.currentState"/></td>

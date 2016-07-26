@@ -1,10 +1,12 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
+<!DOCTYPE html>
 <html>
 
 <head>
   <meta HTTP-EQUIV="Pragma" CONTENT="public">
   <meta HTTP-EQUIV="Cache-Control" CONTENT="max-age=0">
+  <meta charset="utf-8">
   <title><s:text name="application.title"/></title>
   <link rel="stylesheet" type="text/css" href="css/yui/reset-fonts-grids.css" />
   <link href="css/openreports.css" rel="stylesheet" type="text/css">
@@ -23,6 +25,12 @@
   <link rel="stylesheet" type="text/css" href="css/yui/tabview.css">
   <link rel="stylesheet" type="text/css" href="css/yui/button.css">    
   <!-- End YUI Dependencies -->
+  <!-- Bower Dependencies -->
+  <script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bower/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="bower/font-awesome/css/font-awesome.min.css"/>
+  <!-- END Bower Dependencies -->
   <script type="text/javascript" src="js/highlight.js"></script>
 </head>
 
