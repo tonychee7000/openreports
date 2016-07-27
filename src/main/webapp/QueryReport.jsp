@@ -8,18 +8,25 @@
 
 <s:if test="report == null || !report.isDisplayInline()">
 
-<a class="back-link img-report-small" href="reportList.action"><s:text name="link.back.reports"/></a>
-<a class="back-link img-group-small" href="reportGroup.action"><s:text name="link.back.groups"/></a>  	
-  
-<br/>
+	<a class="back-link" href="reportList.action">
+		<i class="fa fa-reply fa-fw"> </i>
+		<s:text name="link.back.reports"/>
+	</a>
+	<a class="back-link" href="reportGroup.action">
+		<i class="fa fa-reply fa-fw"> </i>
+		<s:text name="link.back.groups"/>
+	</a>  	
 
-<s:actionerror/>
-	<div align="center">  
-  		<div class="important img-queryreport" id="instructions"><s:property value="report.name"/></div>  
+	<s:actionerror/>
+	<div>  
+  		<div class="important" id="instructions">
+  			<i class="fa fa-list-alt fa-fw"></i>
+  			<s:property value="report.name"/>
+  		</div>  
 	</div>
 </s:if>
 
-<div align="center">   
+<div style="width: 98%; margin:auto;">   
     
   <s:set name="results" value="results" scope="request" />  
   <s:set name="properties" value="properties" scope="request" />
@@ -27,8 +34,7 @@
   
   <% DisplayProperty[] displayProperties = (DisplayProperty[]) request.getAttribute("properties");
   	 Report report = (Report) request.getAttribute("report");%>
-  
-  <display:table name="results" class="displayTag" sort="list" export="true" pagesize="20" requestURI="queryReportResult.action">  
+  <display:table name="results" class="displaytag table table-striped" sort="list" export="true" pagesize="20" requestURI="queryReportResult.action">  
     <% for (int i=0; i < displayProperties.length; i++) { %>
       <display:column property="<%=displayProperties[i].getName()%>" title="<%=displayProperties[i].getDisplayName()%>" decorator="<%=displayProperties[i].getDecorator()%>" sortable="true" headerClass="sortable" />
     <% } %>
@@ -38,7 +44,6 @@
 	<display:setProperty name="export.csv.filename" value="<%=report.getName() + \".csv\"%>"/>
 	<display:setProperty name="export.excel.filename" value="<%=report.getName() + \".xls\"%>"/>	  
   </display:table>
-
 
   <s:if test="#session.user.scheduler">
   

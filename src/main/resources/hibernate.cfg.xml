@@ -18,18 +18,18 @@
     
         <!-- mapping files -->
         
-        <mapping resource="top.wetofu.reburnbi/objects/Report.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportDataSource.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportGroup.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportParameter.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportUser.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportLog.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportDeliveryLog.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportChart.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportAlert.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ORProperty.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ORTag.hbm.xml"/>
-        <mapping resource="top.wetofu.reburnbi/objects/ReportExportOption.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/Report.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportDataSource.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportGroup.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportParameter.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportUser.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportLog.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportDeliveryLog.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportChart.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportAlert.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ORProperty.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ORTag.hbm.xml"/>
+        <mapping resource="top/wetofu/reburnbi/objects/ReportExportOption.hbm.xml"/>
         
         <!-- end of mapping files -->   
         

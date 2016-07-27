@@ -15,8 +15,6 @@
   	<i class="fa fa-reply fa-fw"> </i>
   	<s:text name="link.back.groups"/>
   </a>  
-
-  <br/><br/>
    
   <div class="important" id="instructions" style="width: 70%;">
   	<i class="fa fa-terminal fa-fw"></i>
@@ -24,7 +22,7 @@
   </div> 
 
 </s:if> 
-<div class="panel panel-default container">
+<div class="panel panel-default container" style="width: 512px;">
   <form action="reportDetail.action" name="reportDetail" method="post" class="" > 
   	<div class="form-group input-group"></div>
   	<s:iterator id="reportParameterMap" value="reportParameters"> 

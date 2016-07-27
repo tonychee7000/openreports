@@ -12,8 +12,6 @@
   	<i class="fa fa-reply fa-fw"> </i>
   	<s:text name="link.back.groups"/>
   </a>	
-  
-  <br/>
 
   <div class="important" id="instructions">
   	<i class="fa fa-list-alt fa-fw"></i>
