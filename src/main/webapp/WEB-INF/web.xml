@@ -2,7 +2,7 @@
 <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 <web-app>
 
-	<display-name>LibreReports</display-name>	
+	<display-name>ReburnBI</display-name>	
 	
 	<context-param>
     	<param-name>contextConfigLocation</param-name>
@@ -109,7 +109,7 @@
 	<servlet>
 		<servlet-name>fileServlet</servlet-name>
 		<servlet-class>
-			org.efs.openreports.dispatcher.FileDispatcher
+			top.wetofu.reburnbi.dispatcher.FileDispatcher
 		</servlet-class>
 		<load-on-startup>99</load-on-startup>
 	</servlet>
@@ -117,7 +117,7 @@
 	<servlet>
 		<servlet-name>MondrianXmlaServlet</servlet-name>
 		<servlet-class>
-			org.efs.openreports.dispatcher.XMLADispatcher
+			top.wetofu.reburnbi.dispatcher.XMLADispatcher
 		</servlet-class>
 	</servlet>
 	

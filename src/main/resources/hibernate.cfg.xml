@@ -18,38 +18,38 @@
     
         <!-- mapping files -->
         
-        <mapping resource="org/efs/openreports/objects/Report.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportDataSource.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportGroup.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportParameter.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportUser.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportLog.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportDeliveryLog.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportChart.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportAlert.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ORProperty.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ORTag.hbm.xml"/>
-        <mapping resource="org/efs/openreports/objects/ReportExportOption.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/Report.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportDataSource.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportGroup.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportParameter.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportUser.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportLog.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportDeliveryLog.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportChart.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportAlert.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ORProperty.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ORTag.hbm.xml"/>
+        <mapping resource="top.wetofu.reburnbi/objects/ReportExportOption.hbm.xml"/>
         
         <!-- end of mapping files -->   
         
         <!-- cache settings -->
         
-        <class-cache class="org.efs.openreports.objects.ORProperty" usage="nonstrict-read-write"/>    
-        <class-cache class="org.efs.openreports.objects.ORTag" usage="nonstrict-read-write"/>    
-        <class-cache class="org.efs.openreports.objects.Report" usage="nonstrict-read-write"/>
-     	<class-cache class="org.efs.openreports.objects.ReportAlert" usage="nonstrict-read-write"/>
-        <class-cache class="org.efs.openreports.objects.ReportChart" usage="nonstrict-read-write"/>
-		<class-cache class="org.efs.openreports.objects.ReportDataSource" usage="nonstrict-read-write"/>
-        <class-cache class="org.efs.openreports.objects.ReportExportOption" usage="nonstrict-read-write"/>
-        <class-cache class="org.efs.openreports.objects.ReportGroup" usage="nonstrict-read-write"/>
-        <class-cache class="org.efs.openreports.objects.ReportParameter" usage="nonstrict-read-write"/>
-        <class-cache class="org.efs.openreports.objects.ReportUser" usage="nonstrict-read-write"/>     
+        <class-cache class="top.wetofu.reburnbi.objects.ORProperty" usage="nonstrict-read-write"/>    
+        <class-cache class="top.wetofu.reburnbi.objects.ORTag" usage="nonstrict-read-write"/>    
+        <class-cache class="top.wetofu.reburnbi.objects.Report" usage="nonstrict-read-write"/>
+     	<class-cache class="top.wetofu.reburnbi.objects.ReportAlert" usage="nonstrict-read-write"/>
+        <class-cache class="top.wetofu.reburnbi.objects.ReportChart" usage="nonstrict-read-write"/>
+		<class-cache class="top.wetofu.reburnbi.objects.ReportDataSource" usage="nonstrict-read-write"/>
+        <class-cache class="top.wetofu.reburnbi.objects.ReportExportOption" usage="nonstrict-read-write"/>
+        <class-cache class="top.wetofu.reburnbi.objects.ReportGroup" usage="nonstrict-read-write"/>
+        <class-cache class="top.wetofu.reburnbi.objects.ReportParameter" usage="nonstrict-read-write"/>
+        <class-cache class="top.wetofu.reburnbi.objects.ReportUser" usage="nonstrict-read-write"/>     
      
-        <collection-cache collection="org.efs.openreports.objects.Report.parameters" usage="nonstrict-read-write"/>
-        <collection-cache collection="org.efs.openreports.objects.ReportGroup.reports" usage="nonstrict-read-write"/>          
-        <collection-cache collection="org.efs.openreports.objects.ReportUser.alerts" usage="nonstrict-read-write"/>                  
-        <collection-cache collection="org.efs.openreports.objects.ReportUser.groups" usage="nonstrict-read-write"/>          
+        <collection-cache collection="top.wetofu.reburnbi.objects.Report.parameters" usage="nonstrict-read-write"/>
+        <collection-cache collection="top.wetofu.reburnbi.objects.ReportGroup.reports" usage="nonstrict-read-write"/>          
+        <collection-cache collection="top.wetofu.reburnbi.objects.ReportUser.alerts" usage="nonstrict-read-write"/>                  
+        <collection-cache collection="top.wetofu.reburnbi.objects.ReportUser.groups" usage="nonstrict-read-write"/>          
         
         <!-- end of cache settings -->        
 

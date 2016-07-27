@@ -23,7 +23,7 @@
   
   <s:set name="reportAlerts" value="reportAlerts" scope="request" />
   
-  <display:table name="reportAlerts" class="displayTag" sort="list" decorator="org.efs.openreports.util.HRefColumnDecorator">  	      
+  <display:table name="reportAlerts" class="displayTag" sort="list" decorator="top.wetofu.reburnbi.util.HRefColumnDecorator">  	      
     <display:column property="name" href="editAlert.action?command=edit" paramId="id" paramProperty="id" titleKey="label.name" sortable="true" headerClass="sortable"/>
     <display:column property="description" titleKey="label.description" sortable="true" headerClass="sortable"/>  	     	        	     	     
     <display:column property="removeLink" title="" href="deleteAlert.action" paramId="id" paramProperty="id"/>

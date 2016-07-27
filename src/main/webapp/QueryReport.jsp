@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display" %>
-<%@page import="org.efs.openreports.util.DisplayProperty"%>
-<%@page import="org.efs.openreports.objects.Report"%>
+<%@page import="top.wetofu.reburnbi.util.DisplayProperty"%>
+<%@page import="top.wetofu.reburnbi.objects.Report"%>
 
 <s:include value="Banner.jsp" />
 

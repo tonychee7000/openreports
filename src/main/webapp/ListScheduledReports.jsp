@@ -29,7 +29,7 @@
   
   <s:set name="scheduledReports" value="scheduledReports" scope="request" />  
   
-  <display:table name="scheduledReports" class="displayTag" sort="list" decorator="org.efs.openreports.util.HRefColumnDecorator" requestURI="listScheduledReports.action" >         
+  <display:table name="scheduledReports" class="displayTag" sort="list" decorator="top.wetofu.reburnbi.util.HRefColumnDecorator" requestURI="listScheduledReports.action" >         
     <display:column property="report.name" titleKey="label.report" sortable="true" headerClass="sortable"/>    	     	      	      
     <display:column property="scheduleDescription" titleKey="label.description" sortable="true" headerClass="sortable"/>
     <display:column property="startDateTime" titleKey="label.startDate" sortable="true" headerClass="sortable" format="{0,date,MM/dd/yyyy h:mm a}"/>   

@@ -36,24 +36,24 @@
 	<display:table name="chartValues" class="displayTag" style="width:75%;">  	   
 		<display:column property="series" titleKey="label.series" sortable="true" headerClass="sortable"/>
 	    <display:column property="category" titleKey="label.xAxis" sortable="true" headerClass="sortable"/>  	     
-		<display:column property="value" titleKey="label.yAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="org.efs.openreports.util.NumberColumnDecorator"/>
+		<display:column property="value" titleKey="label.yAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="top.wetofu.reburnbi.util.NumberColumnDecorator"/>
 	</display:table>  
 </s:if>
 
 <s:if test="report.reportChart.chartType == 1 || report.reportChart.chartType == 4">
 	<display:table name="chartValues" class="displayTag" style="width:75%;" >  
 	   <display:column property="key" titleKey="label.key" sortable="true" headerClass="sortable"/>  	     
-	   <display:column property="value" titleKey="label.value" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="org.efs.openreports.util.NumberColumnDecorator"/>  	     
+	   <display:column property="value" titleKey="label.value" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="top.wetofu.reburnbi.util.NumberColumnDecorator"/>  	     
 	</display:table> 
 </s:if>
 
 <s:if test="report.reportChart.chartType == 2 || report.reportChart.chartType == 6 || report.reportChart.chartType == 11">
     <display:table name="chartValues" class="displayTag" style="width:75%;" >    
 	    <display:column property="series" titleKey="label.series" sortable="true" headerClass="sortable"/>
-	    <display:column property="value" titleKey="label.xAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="org.efs.openreports.util.NumberColumnDecorator"/>
-		<display:column property="YValue" titleKey="label.yAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="org.efs.openreports.util.NumberColumnDecorator"/>  	     
+	    <display:column property="value" titleKey="label.xAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="top.wetofu.reburnbi.util.NumberColumnDecorator"/>
+		<display:column property="YValue" titleKey="label.yAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="top.wetofu.reburnbi.util.NumberColumnDecorator"/>  	     
 		<s:if test="report.reportChart.chartType == 11">
-			<display:column property="ZValue" titleKey="label.zAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="org.efs.openreports.util.NumberColumnDecorator"/>  	     
+			<display:column property="ZValue" titleKey="label.zAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="top.wetofu.reburnbi.util.NumberColumnDecorator"/>  	     
 		</s:if>
 	</display:table>  
 </s:if>
@@ -61,8 +61,8 @@
 <s:if test="report.reportChart.chartType == 3 || report.reportChart.chartType == 7">
 	<display:table name="chartValues" class="displayTag" style="width:75%;" >  
       <display:column property="series" titleKey="label.series" sortable="true" headerClass="sortable"/>
-      <display:column property="time" titleKey="label.time" sortable="true" headerClass="sortable" decorator="org.efs.openreports.util.DateColumnDecorator"/>
-      <display:column property="value" titleKey="label.xAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="org.efs.openreports.util.NumberColumnDecorator"/> 
+      <display:column property="time" titleKey="label.time" sortable="true" headerClass="sortable" decorator="top.wetofu.reburnbi.util.DateColumnDecorator"/>
+      <display:column property="value" titleKey="label.xAxis" sortable="true" headerClass="sortable-right" style="text-align:right;" decorator="top.wetofu.reburnbi.util.NumberColumnDecorator"/> 
 	</display:table>
 </s:if>
   

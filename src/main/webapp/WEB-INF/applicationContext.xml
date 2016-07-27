@@ -37,7 +37,7 @@
     </property>
   </bean>
 
-  <bean id="hibernateProvider" class="org.efs.openreports.providers.HibernateProvider" singleton="true">
+  <bean id="hibernateProvider" class="top.wetofu.reburnbi.providers.HibernateProvider" singleton="true">
      <property name="sessionFactory" ref="sessionFactory"/>
   </bean>
   
@@ -71,7 +71,7 @@
   </bean> 
 
   <bean id="propertiesProvider"
-    class="org.efs.openreports.providers.impl.PropertiesProviderImpl"
+    class="top.wetofu.reburnbi.providers.impl.PropertiesProviderImpl"
     singleton="true">
     <constructor-arg>
       <ref bean="hibernateProvider" />
@@ -79,7 +79,7 @@
   </bean>
 
   <bean id="directoryProvider"
-    class="org.efs.openreports.providers.DirectoryProvider"
+    class="top.wetofu.reburnbi.providers.DirectoryProvider"
     singleton="true">
     <constructor-arg>
       <ref bean="propertiesProvider" />
@@ -87,14 +87,14 @@
   </bean>
 
   <bean id="dateProvider"
-    class="org.efs.openreports.providers.DateProvider" singleton="true">
+    class="top.wetofu.reburnbi.providers.DateProvider" singleton="true">
     <constructor-arg>
       <ref bean="propertiesProvider" />
     </constructor-arg>
   </bean>
 
   <bean id="dataSourceProvider"
-    class="org.efs.openreports.providers.impl.DataSourceProviderImpl"
+    class="top.wetofu.reburnbi.providers.impl.DataSourceProviderImpl"
     singleton="true">
     <constructor-arg>
       <ref bean="hibernateProvider" />
@@ -102,7 +102,7 @@
   </bean>
 
   <bean id="groupProvider"
-    class="org.efs.openreports.providers.impl.GroupProviderImpl"
+    class="top.wetofu.reburnbi.providers.impl.GroupProviderImpl"
     singleton="true">
     <constructor-arg>
       <ref bean="hibernateProvider" />
@@ -110,7 +110,7 @@
   </bean>
 
   <bean id="parameterProvider"
-    class="org.efs.openreports.providers.impl.ParameterProviderImpl"
+    class="top.wetofu.reburnbi.providers.impl.ParameterProviderImpl"
     singleton="true">
     <constructor-arg>
       <ref bean="dataSourceProvider" />
@@ -124,7 +124,7 @@
   </bean>
 
   <bean id="reportLogProvider"
-    class="org.efs.openreports.providers.impl.ReportLogProviderImpl"
+    class="top.wetofu.reburnbi.providers.impl.ReportLogProviderImpl"
     singleton="true">
     <constructor-arg>
       <ref bean="hibernateProvider" />
@@ -132,7 +132,7 @@
   </bean>
 
   <bean id="reportProvider"
-    class="org.efs.openreports.providers.impl.ReportProviderImpl"
+    class="top.wetofu.reburnbi.providers.impl.ReportProviderImpl"
     singleton="true">
     <constructor-arg>
       <ref bean="directoryProvider" />
@@ -143,7 +143,7 @@
   </bean>
   
   <bean id="userProvider"
-    class="org.efs.openreports.providers.impl.UserProviderImpl"
+    class="top.wetofu.reburnbi.providers.impl.UserProviderImpl"
     singleton="true">
     <constructor-arg>
       <ref bean="hibernateProvider" />
@@ -151,14 +151,14 @@
   </bean>
 
   <bean id="mailProvider"
-    class="org.efs.openreports.providers.MailProvider" singleton="true">
+    class="top.wetofu.reburnbi.providers.MailProvider" singleton="true">
     <constructor-arg>
       <ref bean="propertiesProvider" />
     </constructor-arg>
   </bean>
 
   <bean id="chartProvider"
-    class="org.efs.openreports.providers.impl.ChartProviderImpl"
+    class="top.wetofu.reburnbi.providers.impl.ChartProviderImpl"
     singleton="true">  
     <constructor-arg>
       <ref bean="hibernateProvider" />
@@ -166,7 +166,7 @@
   </bean>
   
   <bean id="tagProvider"
-    class="org.efs.openreports.providers.impl.TagProviderImpl" singleton="true">
+    class="top.wetofu.reburnbi.providers.impl.TagProviderImpl" singleton="true">
     <constructor-arg>
       <ref bean="hibernateProvider" />
     </constructor-arg>
@@ -175,19 +175,19 @@
   <bean id="servletContext" class="org.springframework.web.context.support.ServletContextFactoryBean"/>
     
   <bean id="birtProvider"
-    class="org.efs.openreports.providers.BirtProvider" singleton="true">
+    class="top.wetofu.reburnbi.providers.BirtProvider" singleton="true">
 	<constructor-arg>
       <ref bean="servletContext" />
     </constructor-arg>
   </bean>  
 
   <bean id="schedulerProvider"
-    class="org.efs.openreports.providers.impl.SchedulerProviderImpl" singleton="true" > 
+    class="top.wetofu.reburnbi.providers.impl.SchedulerProviderImpl" singleton="true" > 
     <property name="scheduler" ref="scheduler" />
   </bean>       
     
   <bean id="alertProvider"
-    class="org.efs.openreports.providers.impl.AlertProviderImpl" singleton="true">
+    class="top.wetofu.reburnbi.providers.impl.AlertProviderImpl" singleton="true">
     <constructor-arg>
       <ref bean="dataSourceProvider" />
     </constructor-arg>
@@ -200,33 +200,33 @@
   </bean>   
   
   <bean id="searchResultsTableDecorator"
-  	class="org.efs.openreports.util.SearchResultsTableDecorator">
+  	class="top.wetofu.reburnbi.util.SearchResultsTableDecorator">
   	<property name="tagProvider" ref="tagProvider" />  	
   </bean>
   
   <bean id="dateColumnDecorator"
-  	class="org.efs.openreports.util.DateColumnDecorator">
+  	class="top.wetofu.reburnbi.util.DateColumnDecorator">
   	<property name="dateProvider" ref="dateProvider" />  	
   </bean>
   
   <bean id="dateTimeColumnDecorator"
-  	class="org.efs.openreports.util.DateTimeColumnDecorator">
+  	class="top.wetofu.reburnbi.util.DateTimeColumnDecorator">
   	<property name="dateProvider" ref="dateProvider" />  	
   </bean>        
   
   <bean id="fileSystemDeliveryMethod"
-  	class="org.efs.openreports.delivery.FileSystemDeliveryMethod">
+  	class="top.wetofu.reburnbi.delivery.FileSystemDeliveryMethod">
   	<property name="directoryProvider" ref="directoryProvider" />
   	<property name="mailProvider" ref="mailProvider" /> 	
   </bean>  
   
   <bean id="emailDeliveryMethod"
-  	class="org.efs.openreports.delivery.EMailDeliveryMethod">  	
+  	class="top.wetofu.reburnbi.delivery.EMailDeliveryMethod">  	
   	<property name="mailProvider" ref="mailProvider" /> 	
   </bean>  
 
   <bean id="fontProvider"
-    class="org.efs.openreports.providers.FontProvider" singleton="true">
+    class="top.wetofu.reburnbi.providers.FontProvider" singleton="true">
     <constructor-arg value="${openreports.font.directories}" />
   </bean>
 </beans>

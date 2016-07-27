@@ -28,7 +28,7 @@
   
   <s:set name="reports" value="reports" scope="request" />  
   
-  <display:table name="reports" class="displayTag" sort="list" requestURI="listReports.action" decorator="org.efs.openreports.util.HRefColumnDecorator">  	   	      
+  <display:table name="reports" class="displayTag" sort="list" requestURI="listReports.action" decorator="top.wetofu.reburnbi.util.HRefColumnDecorator">  	   	      
     <display:column property="name" href="editReport.action?command=edit" paramId="id" paramProperty="id" titleKey="label.name" sortable="true" headerClass="sortable"/>    	     	      	     
     <display:column property="description" titleKey="label.description" sortable="true" headerClass="sortable"/>  	 
     <display:column property="addToGroupLink" title="" href="editReportGroups.action" paramId="id" paramProperty="id"/>  	     	         	        	     	     

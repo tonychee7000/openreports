@@ -23,7 +23,7 @@
   
   <s:set name="reportCharts" value="reportCharts" scope="request" />
   
-  <display:table name="reportCharts" class="displayTag" sort="list" requestURI="listCharts.action" decorator="org.efs.openreports.util.HRefColumnDecorator">      
+  <display:table name="reportCharts" class="displayTag" sort="list" requestURI="listCharts.action" decorator="top.wetofu.reburnbi.util.HRefColumnDecorator">      
     <display:column property="name" href="editChart.action?command=edit" paramId="id" paramProperty="id" titleKey="label.name" sortable="true" headerClass="sortable"/>    	     	      	     
     <display:column property="description" titleKey="label.description" sortable="true" headerClass="sortable"/>  	     	        	     	     
     <display:column property="removeLink" title="" href="deleteChart.action" paramId="id" paramProperty="id"/>  	     	     

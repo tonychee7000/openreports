@@ -23,7 +23,7 @@
   
   <s:set name="reportParameters" value="reportParameters" scope="request" />
   
-  <display:table name="reportParameters" class="displayTag" sort="list"  requestURI="listReportParameters.action" decorator="org.efs.openreports.util.HRefColumnDecorator">  	      
+  <display:table name="reportParameters" class="displayTag" sort="list"  requestURI="listReportParameters.action" decorator="top.wetofu.reburnbi.util.HRefColumnDecorator">  	      
     <display:column property="name" href="editReportParameter.action?command=edit" paramId="id" paramProperty="id" titleKey="label.name" sortable="true" headerClass="sortable"/>
     <display:column property="description" titleKey="label.description" sortable="true" headerClass="sortable"/>  	     	        	     	     
     <display:column property="removeLink" title="" href="deleteReportParameter.action" paramId="id" paramProperty="id"/>  	     	     

@@ -12,7 +12,7 @@
     class="org.codehaus.xfire.spring.ServiceBean" singleton="true">
     <property name="serviceBean" ref="reportService" />
     <property name="serviceClass"
-      value="org.efs.openreports.services.ReportService" />
+      value="top.wetofu.reburnbi.services.ReportService" />
     <property name="inHandlers">
       <list>
         <ref bean="addressingHandler" />
@@ -31,7 +31,7 @@
   </bean>
 
   <bean id="reportService"
-    class="org.efs.openreports.services.ReportServiceImpl">
+    class="top.wetofu.reburnbi.services.ReportServiceImpl">
     <property name="reportProvider" ref="reportProvider" />
     <property name="reportLogProvider" ref="reportLogProvider" />   
     <property name="schedulerProvider" ref="schedulerProvider" />
@@ -47,7 +47,7 @@
     class="org.codehaus.xfire.spring.ServiceBean" singleton="true">
     <property name="serviceBean" ref="userService" />
     <property name="serviceClass"
-      value="org.efs.openreports.services.UserService" />
+      value="top.wetofu.reburnbi.services.UserService" />
     <property name="inHandlers">
       <list>
         <ref bean="addressingHandler" />
@@ -56,7 +56,7 @@
   </bean>
 
   <bean id="userService"
-    class="org.efs.openreports.services.UserServiceImpl">     
+    class="top.wetofu.reburnbi.services.UserServiceImpl">     
     <property name="userProvider" ref="userProvider" />   
   </bean>
   
@@ -64,7 +64,7 @@
     class="org.codehaus.xfire.spring.ServiceBean" singleton="true">
     <property name="serviceBean" ref="alertService" />
     <property name="serviceClass"
-      value="org.efs.openreports.services.AlertService" />
+      value="top.wetofu.reburnbi.services.AlertService" />
     <property name="inHandlers">
       <list>
         <ref bean="addressingHandler" />
@@ -73,7 +73,7 @@
   </bean>
 
   <bean id="alertService"
-    class="org.efs.openreports.services.AlertServiceImpl">
+    class="top.wetofu.reburnbi.services.AlertServiceImpl">
     <property name="alertProvider" ref="alertProvider" />   
     <property name="userProvider" ref="userProvider" />   
     <property name="userService" ref="userService" />
@@ -83,7 +83,7 @@
     class="org.codehaus.xfire.spring.ServiceBean" singleton="true">
     <property name="serviceBean" ref="parameterService" />
     <property name="serviceClass"
-      value="org.efs.openreports.services.ParameterService" />
+      value="top.wetofu.reburnbi.services.ParameterService" />
     <property name="inHandlers">
       <list>
         <ref bean="addressingHandler" />
@@ -92,7 +92,7 @@
   </bean>
 
   <bean id="parameterService"
-    class="org.efs.openreports.services.ParameterServiceImpl">
+    class="top.wetofu.reburnbi.services.ParameterServiceImpl">
     <property name="parameterProvider" ref="parameterProvider" />   
   </bean>
   
@@ -100,7 +100,7 @@
     class="org.codehaus.xfire.spring.ServiceBean" singleton="true">
     <property name="serviceBean" ref="schedulerService" />
     <property name="serviceClass"
-      value="org.efs.openreports.services.SchedulerService" />
+      value="top.wetofu.reburnbi.services.SchedulerService" />
     <property name="inHandlers">
       <list>
         <ref bean="addressingHandler" />
@@ -109,7 +109,7 @@
   </bean>
 
   <bean id="schedulerService"
-    class="org.efs.openreports.services.SchedulerServiceImpl">
+    class="top.wetofu.reburnbi.services.SchedulerServiceImpl">
     <property name="schedulerProvider" ref="schedulerProvider" />   
     <property name="userProvider" ref="userProvider" />
     <property name="userService" ref="userService" />     
@@ -119,7 +119,7 @@
   	class="org.codehaus.xfire.spring.ServiceBean" singleton="true">
   	<property name="serviceBean" ref="deliveredReportService" />
   	<property name="serviceClass"
-  		value="org.efs.openreports.services.DeliveredReportService" />
+  		value="top.wetofu.reburnbi.services.DeliveredReportService" />
   	<property name="inHandlers">
   		<list>
   			<ref bean="addressingHandler" />
@@ -128,7 +128,7 @@
   </bean>
 
   <bean id="deliveredReportService"
-  	class="org.efs.openreports.services.DeliveredReportServiceImpl">
+  	class="top.wetofu.reburnbi.services.DeliveredReportServiceImpl">
   	<property name="userService" ref="userService" />
   </bean>   
 	

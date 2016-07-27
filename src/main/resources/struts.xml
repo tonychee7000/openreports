@@ -7,26 +7,26 @@
     <package name="default" extends="struts-default"> 
     
 		<result-types>
-            <result-type name="queryReportTemplate" class="org.efs.openreports.dispatcher.QueryReportTemplateResult"/>  		
+            <result-type name="queryReportTemplate" class="top.wetofu.reburnbi.dispatcher.QueryReportTemplateResult"/>  		
         </result-types>
 		
     	<interceptors>
-    	    <interceptor name="security" class="org.efs.openreports.interceptors.SecurityInterceptor"/>
-			<interceptor name="scheduler" class="org.efs.openreports.interceptors.SchedulerRoleInterceptor"/>
-			<interceptor name="chartAdmin" class="org.efs.openreports.interceptors.ChartAdminRoleInterceptor"/>
-			<interceptor name="dataSourceAdmin" class="org.efs.openreports.interceptors.DataSourceAdminRoleInterceptor"/>
-			<interceptor name="groupAdmin" class="org.efs.openreports.interceptors.GroupAdminRoleInterceptor"/>
-			<interceptor name="logViewer" class="org.efs.openreports.interceptors.LogViewerRoleInterceptor"/>
-			<interceptor name="parameterAdmin" class="org.efs.openreports.interceptors.ParameterAdminRoleInterceptor"/>
-			<interceptor name="reportAdmin" class="org.efs.openreports.interceptors.ReportAdminRoleInterceptor"/>
-			<interceptor name="rootAdmin" class="org.efs.openreports.interceptors.RootAdminRoleInterceptor"/>
-			<interceptor name="userAdmin" class="org.efs.openreports.interceptors.UserAdminRoleInterceptor"/>
-			<interceptor name="alertAdmin" class="org.efs.openreports.interceptors.AlertAdminRoleInterceptor"/>
-			<interceptor name="alert" class="org.efs.openreports.interceptors.AlertUserRoleInterceptor"/>
-			<interceptor name="dashboard" class="org.efs.openreports.interceptors.DashboardRoleInterceptor"/>
-			<interceptor name="uploader" class="org.efs.openreports.interceptors.UploaderRoleInterceptor"/>
-			<interceptor name="schedulerAdmin" class="org.efs.openreports.interceptors.SchedulerAdminRoleInterceptor"/>
-			<interceptor name="breadcrumbs" class="org.efs.openreports.interceptors.BreadcrumbsInterceptor"/>
+    	    <interceptor name="security" class="top.wetofu.reburnbi.interceptors.SecurityInterceptor"/>
+			<interceptor name="scheduler" class="top.wetofu.reburnbi.interceptors.SchedulerRoleInterceptor"/>
+			<interceptor name="chartAdmin" class="top.wetofu.reburnbi.interceptors.ChartAdminRoleInterceptor"/>
+			<interceptor name="dataSourceAdmin" class="top.wetofu.reburnbi.interceptors.DataSourceAdminRoleInterceptor"/>
+			<interceptor name="groupAdmin" class="top.wetofu.reburnbi.interceptors.GroupAdminRoleInterceptor"/>
+			<interceptor name="logViewer" class="top.wetofu.reburnbi.interceptors.LogViewerRoleInterceptor"/>
+			<interceptor name="parameterAdmin" class="top.wetofu.reburnbi.interceptors.ParameterAdminRoleInterceptor"/>
+			<interceptor name="reportAdmin" class="top.wetofu.reburnbi.interceptors.ReportAdminRoleInterceptor"/>
+			<interceptor name="rootAdmin" class="top.wetofu.reburnbi.interceptors.RootAdminRoleInterceptor"/>
+			<interceptor name="userAdmin" class="top.wetofu.reburnbi.interceptors.UserAdminRoleInterceptor"/>
+			<interceptor name="alertAdmin" class="top.wetofu.reburnbi.interceptors.AlertAdminRoleInterceptor"/>
+			<interceptor name="alert" class="top.wetofu.reburnbi.interceptors.AlertUserRoleInterceptor"/>
+			<interceptor name="dashboard" class="top.wetofu.reburnbi.interceptors.DashboardRoleInterceptor"/>
+			<interceptor name="uploader" class="top.wetofu.reburnbi.interceptors.UploaderRoleInterceptor"/>
+			<interceptor name="schedulerAdmin" class="top.wetofu.reburnbi.interceptors.SchedulerAdminRoleInterceptor"/>
+			<interceptor name="breadcrumbs" class="top.wetofu.reburnbi.interceptors.BreadcrumbsInterceptor"/>
 												
     	  	<interceptor-stack name="defaultStack">    
     	  		<interceptor-ref name="servlet-config"/>
@@ -59,7 +59,7 @@
             </result>
         </global-results>
 
-        <action name="login" class="org.efs.openreports.actions.LoginAction">
+        <action name="login" class="top.wetofu.reburnbi.actions.LoginAction">
             <result name="input">
                 <param name="location">Login.jsp</param>
             </result>      
@@ -72,13 +72,13 @@
     		<interceptor-ref name="defaultStack"/>     		 
         </action>		    
 		
-		<action name="logout" class="org.efs.openreports.actions.LogoutAction">
+		<action name="logout" class="top.wetofu.reburnbi.actions.LogoutAction">
 			<result name="success">
                 <param name="location">Login.jsp</param>
             </result>           
         </action> 
         
-        <action name="dashboard" class="org.efs.openreports.actions.DashboardAction">
+        <action name="dashboard" class="top.wetofu.reburnbi.actions.DashboardAction">
              <result name="input">
                 <param name="location">Dashboard.jsp</param>
             </result>  
@@ -86,7 +86,7 @@
             <interceptor-ref name="dashboard"/>    
         </action>         
         
-        <action name="reportGroup" class="org.efs.openreports.actions.ReportGroupAction">
+        <action name="reportGroup" class="top.wetofu.reburnbi.actions.ReportGroupAction">
              <result name="input">
                 <param name="location">ReportGroup.jsp</param>
             </result>              
@@ -95,13 +95,13 @@
     		</result>             
         </action>   
              
-      	<action name="reportList" class="org.efs.openreports.actions.ReportListAction">
+      	<action name="reportList" class="top.wetofu.reburnbi.actions.ReportListAction">
              <result name="success">
                 <param name="location">ReportList.jsp</param>
             </result>                       
         </action>       
         
-        <action name="reportDetail" class="org.efs.openreports.actions.ReportDetailAction">
+        <action name="reportDetail" class="top.wetofu.reburnbi.actions.ReportDetailAction">
             <result name="input">
                 <param name="location">ReportDetail.jsp</param>
             </result>
@@ -110,7 +110,7 @@
     		</result>                
         </action>
         
-        <action name="reportOptions" class="org.efs.openreports.actions.ReportOptionsAction">
+        <action name="reportOptions" class="top.wetofu.reburnbi.actions.ReportOptionsAction">
             <result name="input">
                 <param name="location">ReportOptions.jsp</param>
             </result>
@@ -137,7 +137,7 @@
     		</result>  		 
         </action>
         
-        <action name="reportSchedule" class="org.efs.openreports.actions.ReportScheduleAction">
+        <action name="reportSchedule" class="top.wetofu.reburnbi.actions.ReportScheduleAction">
             <result name="input">
                 <param name="location">ReportSchedule.jsp</param>
             </result>     
@@ -148,13 +148,13 @@
             <interceptor-ref name="scheduler"/>                                
         </action>
         
-        <action name="reportRun" class="org.efs.openreports.actions.ReportRunAction">                                                    
+        <action name="reportRun" class="top.wetofu.reburnbi.actions.ReportRunAction">                                                    
 			<result name="success" type="redirect"> 
     			<param name="location">reportViewer.action</param> 
     		</result>
         </action>
         
-		<action name="executeReport" class="org.efs.openreports.actions.ExecuteReportAction">           
+		<action name="executeReport" class="top.wetofu.reburnbi.actions.ExecuteReportAction">           
 			<result name="reportDetail" type="chain"> 
     			<param name="actionName">reportDetail</param> 
     		</result>
@@ -176,7 +176,7 @@
 			<interceptor-ref name="defaultStack"/>     
         </action>
         
-        <action name="executeReportAuthenticated" class="org.efs.openreports.actions.ExecuteReportAction">           
+        <action name="executeReportAuthenticated" class="top.wetofu.reburnbi.actions.ExecuteReportAction">           
             <result name="success" type="chain"> 
     			<param name="actionName">reportRun</param> 
     		</result>
@@ -194,13 +194,13 @@
     		</result>
         </action>				
 		
-		<action name="reportViewer" class="org.efs.openreports.actions.ReportViewerAction">                                                    						
+		<action name="reportViewer" class="top.wetofu.reburnbi.actions.ReportViewerAction">                                                    						
 			<result name="success">
                 <param name="location">ReportViewer.jsp</param>
             </result>
         </action>
 		
-        <action name="queryReport" class="org.efs.openreports.actions.QueryReportAction">                                                    
+        <action name="queryReport" class="top.wetofu.reburnbi.actions.QueryReportAction">                                                    
         	<result name="success" type="redirect">
                 <param name="location">queryReportResult.action</param>
             </result>
@@ -212,33 +212,33 @@
             </result>   
         </action>		
         
-        <action name="queryReportResult" class="org.efs.openreports.actions.QueryReportResultAction">                                                    
+        <action name="queryReportResult" class="top.wetofu.reburnbi.actions.QueryReportResultAction">                                                    
         	<result name="success" >
                 <param name="location">QueryReport.jsp</param>
             </result>
             <result name="queryReportTemplate" type="queryReportTemplate"/>           
         </action>
         
-		<action name="jxlsReport" class="org.efs.openreports.actions.JXLSReportAction">   			                                                   	
+		<action name="jxlsReport" class="top.wetofu.reburnbi.actions.JXLSReportAction">   			                                                   	
         </action>
         
-        <action name="chartReport" class="org.efs.openreports.actions.ChartReportAction">                                                    
+        <action name="chartReport" class="top.wetofu.reburnbi.actions.ChartReportAction">                                                    
         	<result name="success" >
                 <param name="location">ChartReport.jsp</param>
             </result>
         </action>
         
-        <action name="imageLoader" class="org.efs.openreports.actions.image.ImageLoaderAction">                       
+        <action name="imageLoader" class="top.wetofu.reburnbi.actions.image.ImageLoaderAction">                       
         </action>
         
         <action name="jpivot" 
-    		class="org.efs.openreports.actions.JPivotAction">
+    		class="top.wetofu.reburnbi.actions.JPivotAction">
     		<result name="success">
     			<param name="location">JPivot.jsp</param>
     		</result>
     	</action>
         
-        <action name="userAdmin" class="org.efs.openreports.actions.UserAdminAction">
+        <action name="userAdmin" class="top.wetofu.reburnbi.actions.UserAdminAction">
             <result name="input">
                 <param name="location">UserAdmin.jsp</param>
             </result>
@@ -250,7 +250,7 @@
     		</result>      		              
         </action>
         
-        <action name="userAdminAlerts" class="org.efs.openreports.actions.admin.EditUserAlertsAction">            
+        <action name="userAdminAlerts" class="top.wetofu.reburnbi.actions.admin.EditUserAlertsAction">            
             <result name="input" type="chain">             
     			<param name="actionName">userAdmin</param> 
     		</result>      		
@@ -258,13 +258,13 @@
             <interceptor-ref name="alertAdmin"/>                 
         </action>
         
-        <action name="reportAdmin" class="org.efs.openreports.actions.admin.ReportAdminAction">
+        <action name="reportAdmin" class="top.wetofu.reburnbi.actions.admin.ReportAdminAction">
 	        <result name="success">
                 <param name="location">ReportAdmin.jsp</param>
     		</result>             
         </action>
         
-        <action name="editProperties" class="org.efs.openreports.actions.admin.EditPropertiesAction">
+        <action name="editProperties" class="top.wetofu.reburnbi.actions.admin.EditPropertiesAction">
 	        <result name="input">
                 <param name="location">EditProperties.jsp</param>
             </result>  	      
@@ -275,7 +275,7 @@
             <interceptor-ref name="rootAdmin"/>                    
         </action>      
         
-        <action name="imageCleanup" class="org.efs.openreports.actions.admin.ImageCleanupAction">	        	      
+        <action name="imageCleanup" class="top.wetofu.reburnbi.actions.admin.ImageCleanupAction">	        	      
             <result name="success" type="redirect"> 
     			<param name="location">editProperties.action</param> 
     		</result>    
@@ -283,7 +283,7 @@
             <interceptor-ref name="rootAdmin"/>                    
         </action>      
         
-        <action name="reportUpload" class="org.efs.openreports.actions.admin.ReportUploadAction">
+        <action name="reportUpload" class="top.wetofu.reburnbi.actions.admin.ReportUploadAction">
             <result name="success" >
                 <param name="location">UploadReportFiles.jsp</param>
             </result>
@@ -291,7 +291,7 @@
             <interceptor-ref name="uploader"/>                       
         </action>     
         
-        <action name="addReportFileDialog" class="org.efs.openreports.actions.admin.ReportUploadAction">
+        <action name="addReportFileDialog" class="top.wetofu.reburnbi.actions.admin.ReportUploadAction">
             <result name="input">
                 <param name="location">AddDialogErrorResponse.jsp</param>
             </result>                
@@ -302,7 +302,7 @@
             <interceptor-ref name="uploader"/>             
         </action>
         
-        <action name="listDataSources" class="org.efs.openreports.actions.admin.ListDataSourcesAction">
+        <action name="listDataSources" class="top.wetofu.reburnbi.actions.admin.ListDataSourcesAction">
             <result name="success" >
                 <param name="location">ListDataSources.jsp</param>                
             </result>         
@@ -310,7 +310,7 @@
             <interceptor-ref name="dataSourceAdmin"/>                
         </action>
         
-        <action name="listGroups" class="org.efs.openreports.actions.admin.ListGroupsAction">
+        <action name="listGroups" class="top.wetofu.reburnbi.actions.admin.ListGroupsAction">
             <result name="success" >
                 <param name="location">ListGroups.jsp</param>
             </result>  
@@ -318,7 +318,7 @@
             <interceptor-ref name="groupAdmin"/>                       
         </action>
         
-        <action name="listUsers" class="org.efs.openreports.actions.admin.ListUsersAction">
+        <action name="listUsers" class="top.wetofu.reburnbi.actions.admin.ListUsersAction">
             <result name="success">
                 <param name="location">ListUsers.jsp</param>
             </result>  
@@ -326,7 +326,7 @@
             <interceptor-ref name="rootAdmin"/>                       
         </action>
         
-        <action name="listReports" class="org.efs.openreports.actions.admin.ListReportsAction">
+        <action name="listReports" class="top.wetofu.reburnbi.actions.admin.ListReportsAction">
             <result name="success" >
                 <param name="location">ListReports.jsp</param>
             </result>   
@@ -334,7 +334,7 @@
             <interceptor-ref name="reportAdmin"/>                      
         </action>
         
-        <action name="listReportParameters" class="org.efs.openreports.actions.admin.ListReportParametersAction">
+        <action name="listReportParameters" class="top.wetofu.reburnbi.actions.admin.ListReportParametersAction">
             <result name="success" >
                 <param name="location">ListReportParameters.jsp</param>
             </result>  
@@ -342,7 +342,7 @@
             <interceptor-ref name="parameterAdmin"/>                      
         </action>
         
-        <action name="listCharts" class="org.efs.openreports.actions.admin.ListChartsAction">
+        <action name="listCharts" class="top.wetofu.reburnbi.actions.admin.ListChartsAction">
             <result name="success" >
                 <param name="location">ListCharts.jsp</param>
             </result>  
@@ -350,7 +350,7 @@
             <interceptor-ref name="chartAdmin"/>                       
         </action>
         
-        <action name="search" class="org.efs.openreports.actions.admin.SearchAction">
+        <action name="search" class="top.wetofu.reburnbi.actions.admin.SearchAction">
             <result name="success" >
                 <param name="location">ListSearchResults.jsp</param>
             </result>  
@@ -358,7 +358,7 @@
             <interceptor-ref name="rootAdmin"/>                       
         </action>
         
-        <action name="listAlerts" class="org.efs.openreports.actions.admin.ListAlertsAction">
+        <action name="listAlerts" class="top.wetofu.reburnbi.actions.admin.ListAlertsAction">
             <result name="success">
                 <param name="location">ListAlerts.jsp</param>
             </result>  
@@ -366,7 +366,7 @@
             <interceptor-ref name="alertAdmin"/>               
         </action>
         
-        <action name="viewReportLogs" class="org.efs.openreports.actions.admin.ViewReportLogsAction">
+        <action name="viewReportLogs" class="top.wetofu.reburnbi.actions.admin.ViewReportLogsAction">
             <result name="success" >
                 <param name="location">ViewReportLogs.jsp</param>
             </result>   
@@ -374,7 +374,7 @@
             <interceptor-ref name="logViewer"/>                     
         </action>
         
-        <action name="analyzeReportLogs" class="org.efs.openreports.actions.admin.AnalyzeReportLogsAction">
+        <action name="analyzeReportLogs" class="top.wetofu.reburnbi.actions.admin.AnalyzeReportLogsAction">
             <result name="success">
                 <param name="location">AnalyzeReportLogs.jsp</param>
             </result>   
@@ -382,7 +382,7 @@
             <interceptor-ref name="logViewer"/>                     
         </action>
         
-        <action name="editDataSource" class="org.efs.openreports.actions.admin.EditDataSourceAction">
+        <action name="editDataSource" class="top.wetofu.reburnbi.actions.admin.EditDataSourceAction">
             <result name="input">
                 <param name="location">EditDataSource.jsp</param>
             </result>
@@ -393,7 +393,7 @@
             <interceptor-ref name="dataSourceAdmin"/>             
         </action>
         
-        <action name="addDataSourceDialog" class="org.efs.openreports.actions.admin.EditDataSourceAction">
+        <action name="addDataSourceDialog" class="top.wetofu.reburnbi.actions.admin.EditDataSourceAction">
             <result name="input">
                 <param name="location">AddDialogErrorResponse.jsp</param>
             </result>    
@@ -404,7 +404,7 @@
             <interceptor-ref name="dataSourceAdmin"/>             
         </action>
         
-        <action name="editGroup" class="org.efs.openreports.actions.admin.EditGroupAction">
+        <action name="editGroup" class="top.wetofu.reburnbi.actions.admin.EditGroupAction">
             <result name="input">
                 <param name="location">EditGroup.jsp</param>
             </result>
@@ -415,7 +415,7 @@
             <interceptor-ref name="groupAdmin"/>  
         </action>
         
-        <action name="editUser" class="org.efs.openreports.actions.admin.EditUserAction">
+        <action name="editUser" class="top.wetofu.reburnbi.actions.admin.EditUserAction">
             <result name="input" >
                 <param name="location">EditUser.jsp</param>
             </result>
@@ -426,7 +426,7 @@
             <interceptor-ref name="rootAdmin"/>               
         </action>        
          
-        <action name="editGroupUsers" class="org.efs.openreports.actions.admin.EditGroupUsersAction">
+        <action name="editGroupUsers" class="top.wetofu.reburnbi.actions.admin.EditGroupUsersAction">
             <result name="input">
                 <param name="location">EditGroupUsers.jsp</param>
             </result>  
@@ -437,7 +437,7 @@
             <interceptor-ref name="groupAdmin"/>                
         </action>
         
-        <action name="editReport" class="org.efs.openreports.actions.admin.EditReportAction">
+        <action name="editReport" class="top.wetofu.reburnbi.actions.admin.EditReportAction">
             <result name="input">
                 <param name="location">EditReport.jsp</param>
             </result>
@@ -448,7 +448,7 @@
             <interceptor-ref name="reportAdmin"/>           
         </action>
         
-        <action name="editReportGroups" class="org.efs.openreports.actions.admin.EditReportGroupsAction">
+        <action name="editReportGroups" class="top.wetofu.reburnbi.actions.admin.EditReportGroupsAction">
             <result name="input">
                 <param name="location">EditReportGroups.jsp</param>
             </result>  
@@ -459,7 +459,7 @@
             <interceptor-ref name="reportAdmin"/>                
         </action>
         
-        <action name="editReportParameterMap" class="org.efs.openreports.actions.admin.EditReportParameterMapAction">
+        <action name="editReportParameterMap" class="top.wetofu.reburnbi.actions.admin.EditReportParameterMapAction">
             <result name="input" type="chain">             
     			<param name="actionName">editReport</param> 
     		</result>   
@@ -467,7 +467,7 @@
             <interceptor-ref name="reportAdmin"/>                
         </action>
         
-        <action name="editUserAlerts" class="org.efs.openreports.actions.admin.EditUserAlertsAction">           
+        <action name="editUserAlerts" class="top.wetofu.reburnbi.actions.admin.EditUserAlertsAction">           
             <result name="success" type="chain">             
     			<param name="actionName">editUser</param> 
     		</result>  
@@ -475,7 +475,7 @@
     		<interceptor-ref name="alertAdmin"/>           
         </action>
         
-        <action name="editExportOptions" class="org.efs.openreports.actions.admin.EditExportOptionsAction">            
+        <action name="editExportOptions" class="top.wetofu.reburnbi.actions.admin.EditExportOptionsAction">            
             <result name="success" type="chain">             
     			<param name="actionName">editReport</param> 
     		</result>  
@@ -483,7 +483,7 @@
             <interceptor-ref name="reportAdmin"/>                
         </action>
         
-        <action name="editReportParameter" class="org.efs.openreports.actions.admin.EditReportParameterAction">
+        <action name="editReportParameter" class="top.wetofu.reburnbi.actions.admin.EditReportParameterAction">
             <result name="input">
                 <param name="location">EditReportParameter.jsp</param>
             </result>
@@ -494,7 +494,7 @@
             <interceptor-ref name="parameterAdmin"/>          
         </action>
         
-        <action name="addParameterDialog" class="org.efs.openreports.actions.admin.EditReportParameterAction">
+        <action name="addParameterDialog" class="top.wetofu.reburnbi.actions.admin.EditReportParameterAction">
             <result name="input">
                 <param name="location">AddDialogErrorResponse.jsp</param>
             </result>                
@@ -505,7 +505,7 @@
             <interceptor-ref name="parameterAdmin"/>             
         </action>
         
-        <action name="editChart" class="org.efs.openreports.actions.admin.EditChartAction">
+        <action name="editChart" class="top.wetofu.reburnbi.actions.admin.EditChartAction">
             <result name="input">
                 <param name="location">EditChart.jsp</param>
             </result>
@@ -516,7 +516,7 @@
             <interceptor-ref name="chartAdmin"/>              
         </action>        
         
-        <action name="addChartDialog" class="org.efs.openreports.actions.admin.EditChartAction">
+        <action name="addChartDialog" class="top.wetofu.reburnbi.actions.admin.EditChartAction">
             <result name="input">
                 <param name="location">AddDialogErrorResponse.jsp</param>
             </result>               
@@ -527,7 +527,7 @@
             <interceptor-ref name="chartAdmin"/>             
         </action>
         
-        <action name="editAlert" class="org.efs.openreports.actions.admin.EditAlertAction">
+        <action name="editAlert" class="top.wetofu.reburnbi.actions.admin.EditAlertAction">
             <result name="input">
                 <param name="location">EditAlert.jsp</param>
             </result>
@@ -538,7 +538,7 @@
 			<interceptor-ref name="alertAdmin"/>            
         </action>
         
-        <action name="deleteDataSource" class="org.efs.openreports.actions.admin.DeleteDataSourceAction">
+        <action name="deleteDataSource" class="top.wetofu.reburnbi.actions.admin.DeleteDataSourceAction">
          	<result name="input" >
                 <param name="location">DeleteDataSource.jsp</param>
             </result>
@@ -549,7 +549,7 @@
             <interceptor-ref name="dataSourceAdmin"/>                     
         </action>
         
-        <action name="deleteGroup" class="org.efs.openreports.actions.admin.DeleteGroupAction">
+        <action name="deleteGroup" class="top.wetofu.reburnbi.actions.admin.DeleteGroupAction">
             <result name="input" >
                 <param name="location">DeleteGroup.jsp</param>
             </result>
@@ -560,7 +560,7 @@
             <interceptor-ref name="groupAdmin"/>                         
         </action>
         
-        <action name="deleteUser" class="org.efs.openreports.actions.admin.DeleteUserAction">
+        <action name="deleteUser" class="top.wetofu.reburnbi.actions.admin.DeleteUserAction">
 	        <result name="input" >
                 <param name="location">DeleteUser.jsp</param>
             </result>
@@ -571,7 +571,7 @@
             <interceptor-ref name="rootAdmin"/>                  
         </action>
         
-        <action name="deleteReport" class="org.efs.openreports.actions.admin.DeleteReportAction">
+        <action name="deleteReport" class="top.wetofu.reburnbi.actions.admin.DeleteReportAction">
          	<result name="input">
                 <param name="location">DeleteReport.jsp</param>
             </result>
@@ -582,7 +582,7 @@
             <interceptor-ref name="reportAdmin"/>                      
         </action>
         
-        <action name="deleteReportParameter" class="org.efs.openreports.actions.admin.DeleteReportParameterAction">
+        <action name="deleteReportParameter" class="top.wetofu.reburnbi.actions.admin.DeleteReportParameterAction">
          	<result name="input">
                 <param name="location">DeleteReportParameter.jsp</param>
             </result>
@@ -593,7 +593,7 @@
             <interceptor-ref name="parameterAdmin"/>                     
         </action> 
         
-        <action name="deleteChart" class="org.efs.openreports.actions.admin.DeleteChartAction">
+        <action name="deleteChart" class="top.wetofu.reburnbi.actions.admin.DeleteChartAction">
          	<result name="input">
                 <param name="location">DeleteChart.jsp</param>
             </result>
@@ -604,7 +604,7 @@
             <interceptor-ref name="chartAdmin"/>                     
         </action> 
         
-        <action name="deleteAlert" class="org.efs.openreports.actions.admin.DeleteAlertAction">
+        <action name="deleteAlert" class="top.wetofu.reburnbi.actions.admin.DeleteAlertAction">
          	<result name="input">
                 <param name="location">DeleteAlert.jsp</param>
             </result>
@@ -615,7 +615,7 @@
             <interceptor-ref name="alertAdmin"/>                    
         </action> 
         
-        <action name="schedulerAdmin" class="org.efs.openreports.actions.admin.SchedulerAdminAction">
+        <action name="schedulerAdmin" class="top.wetofu.reburnbi.actions.admin.SchedulerAdminAction">
             <result name="success">
                 <param name="location">SchedulerAdmin.jsp</param>
             </result>   
@@ -623,7 +623,7 @@
             <interceptor-ref name="schedulerAdmin"/>  
         </action>
         
-        <action name="listScheduledReports" class="org.efs.openreports.actions.schedule.ListScheduledReportsAction">
+        <action name="listScheduledReports" class="top.wetofu.reburnbi.actions.schedule.ListScheduledReportsAction">
             <result name="success">
                 <param name="location">ListScheduledReports.jsp</param>
             </result>   
@@ -631,7 +631,7 @@
             <interceptor-ref name="scheduler"/>  
         </action>
    
-   		<action name="deleteScheduledReport" class="org.efs.openreports.actions.schedule.DeleteScheduledReportAction">
+   		<action name="deleteScheduledReport" class="top.wetofu.reburnbi.actions.schedule.DeleteScheduledReportAction">
          	<result name="input">
                 <param name="location">DeleteScheduledReport.jsp</param>
             </result>
@@ -642,7 +642,7 @@
             <interceptor-ref name="scheduler"/>                       
         </action>
         
-        <action name="changeScheduleState" class="org.efs.openreports.actions.schedule.ChangeScheduleStateAction">
+        <action name="changeScheduleState" class="top.wetofu.reburnbi.actions.schedule.ChangeScheduleStateAction">
          	<result name="input">
                 <param name="location">ChangeScheduleState.jsp</param>
             </result>
@@ -653,7 +653,7 @@
             <interceptor-ref name="schedulerAdmin"/>                       
         </action>
         
-        <action name="reportScheduleByUser" class="org.efs.openreports.actions.ReportScheduleAction">
+        <action name="reportScheduleByUser" class="top.wetofu.reburnbi.actions.ReportScheduleAction">
             <result name="input">
                 <param name="location">ReportSchedule.jsp</param>
             </result>     
@@ -664,7 +664,7 @@
             <interceptor-ref name="schedulerAdmin"/>                                
         </action>
         
-        <action name="deleteScheduledReportByUser" class="org.efs.openreports.actions.schedule.DeleteScheduledReportAction">
+        <action name="deleteScheduledReportByUser" class="top.wetofu.reburnbi.actions.schedule.DeleteScheduledReportAction">
          	<result name="input">
                 <param name="location">DeleteScheduledReport.jsp</param>
             </result>
@@ -675,7 +675,7 @@
             <interceptor-ref name="schedulerAdmin"/>                       
         </action>      
         
-        <action name="deleteGeneratedReport" class="org.efs.openreports.actions.admin.DeleteGeneratedReportAction">
+        <action name="deleteGeneratedReport" class="top.wetofu.reburnbi.actions.admin.DeleteGeneratedReportAction">
          	<result name="input">
                 <param name="location">DeleteGeneratedReport.jsp</param>
             </result>
@@ -684,7 +684,7 @@
             </result>                                 
         </action> 
         
-        <action name="dataImport" class="org.efs.openreports.actions.admin.DataImportAction">	      
+        <action name="dataImport" class="top.wetofu.reburnbi.actions.admin.DataImportAction">	      
             <result name="success" >
                 <param name="location">DataImport.jsp</param>
             </result>  
@@ -692,7 +692,7 @@
             <interceptor-ref name="rootAdmin"/>                  
         </action>    
         
-        <action name="dataExport" class="org.efs.openreports.actions.admin.DataExportAction">	      
+        <action name="dataExport" class="top.wetofu.reburnbi.actions.admin.DataExportAction">	      
             <result name="success" >
                 <param name="location">DataExport.jsp</param>
             </result>  

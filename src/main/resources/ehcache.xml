@@ -58,46 +58,46 @@
 
 	<!-- OpenReports specific caches -->
 
-	<cache name="org.efs.openreports.objects.ORProperty"
+	<cache name="top.wetofu.reburnbi.objects.ORProperty"
 		maxElementsInMemory="100" eternal="true" overflowToDisk="false" />
 		
-	<cache name="org.efs.openreports.objects.ORTag"
+	<cache name="top.wetofu.reburnbi.objects.ORTag"
 		maxElementsInMemory="1000" eternal="true" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.Report"
+	<cache name="top.wetofu.reburnbi.objects.Report"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportAlert"
+	<cache name="top.wetofu.reburnbi.objects.ReportAlert"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportChart"
+	<cache name="top.wetofu.reburnbi.objects.ReportChart"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportDataSource"
+	<cache name="top.wetofu.reburnbi.objects.ReportDataSource"
 		maxElementsInMemory="100" eternal="true" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportExportOption"
+	<cache name="top.wetofu.reburnbi.objects.ReportExportOption"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportGroup"
+	<cache name="top.wetofu.reburnbi.objects.ReportGroup"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportParameter"
+	<cache name="top.wetofu.reburnbi.objects.ReportParameter"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportUser"
+	<cache name="top.wetofu.reburnbi.objects.ReportUser"
 		maxElementsInMemory="100" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.Report.parameters"
+	<cache name="top.wetofu.reburnbi.objects.Report.parameters"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportGroup.reports"
+	<cache name="top.wetofu.reburnbi.objects.ReportGroup.reports"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportUser.alerts"
+	<cache name="top.wetofu.reburnbi.objects.ReportUser.alerts"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
-	<cache name="org.efs.openreports.objects.ReportUser.groups"
+	<cache name="top.wetofu.reburnbi.objects.ReportUser.groups"
 		maxElementsInMemory="500" eternal="false" overflowToDisk="false" />
 
 	<cache name="org.hibernate.cache.StandardQueryCache"

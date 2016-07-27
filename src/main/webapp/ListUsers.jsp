@@ -23,7 +23,7 @@
   
   <s:set name="users" value="users" scope="request" />
    
-  <display:table name="users" class="displayTag" sort="list" requestURI="listUsers.action" decorator="org.efs.openreports.util.HRefColumnDecorator">  	      
+  <display:table name="users" class="displayTag" sort="list" requestURI="listUsers.action" decorator="top.wetofu.reburnbi.util.HRefColumnDecorator">  	      
     <display:column property="name" href="editUser.action?command=edit" paramId="id" paramProperty="id" titleKey="label.name" sortable="true" headerClass="sortable"/>
     <display:column property="removeLink" title="" href="deleteUser.action" paramId="id" paramProperty="id"/>  	     	     
   </display:table>  
