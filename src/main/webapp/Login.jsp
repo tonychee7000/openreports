@@ -26,7 +26,7 @@
   	<div class="form-group input-group">
   		<input class="btn btn-success" type="submit" value="<s:text name="login.submit"/>">
   	</div>
-  	<div class="form-group input-group">
+  	<div class="form-group input-group error">
 		<s:actionerror/>
   	</div>
   </form>

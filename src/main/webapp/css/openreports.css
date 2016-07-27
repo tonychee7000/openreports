@@ -24,7 +24,7 @@ ul {
 	letter-spacing:1px;			
 	text-align: left;
 	padding: 6px;
-	padding-left: 40px;
+	padding-left: 10%;
 	width: 90%;
 	color: #314457;
 }
@@ -101,77 +101,13 @@ table td{
 	padding: 3px;	
 }
 
-table.displaytag {
-	border: none;
-	border-collapse: collapse;
-	text-align: left;	
-	width: 95%;
-	border-top: 1px solid black;
-}
-table.displaytag thead tr {
-	background-color: #ececec;
-	background: #FFFFCC url(../images/table-gradient.jpg) 0 0 repeat-x;
-	font-weight: bold;
-	height: 28px;
-	border-bottom: 1px solid;	
-}
-
-table.displaytag tr.even {
-	background-color: white;	
-	border-bottom: 1px solid;	
-}
-
-table.displaytag tr.triggered {	
-	
-	color: white;
-	background: #fff url(../images/red-gradient.gif) 0 0 repeat-x;
-}
-
-table.displaytag tr.triggered a {			
-	color: white;		
-}
-
-table.displaytag tr.odd {
-	background-color: white;
-	border-bottom: 1px solid;	
-}
-table.displaytag td {
-	border: none;
-	padding: 4px;	
-	font-size: 10pt;
-	border-bottom: 1px solid black;
-}
-
-table.displaytag a {		
-	font-size: 10pt;
-}
-
 table.displaytag th {
-	padding-left: 5px;
-	padding-right: 15px;
-	font-size: 10pt;
-	border-bottom: 1px solid black;
-}
-
-table.displaytag th.sorted a,table.displaytag th.sortable th.sortable-right a {
-	background-repeat: no-repeat;
-	background-position: right;
-	display: block;
-	width: 100%;
+	text-align: center;
 }
 
 table.displaytag th.sortable-right {
 	text-align: right;
 }
-
-table.displaytag th.order1 a {
-	background-image: url(../images/down-arrow.png);
-}
-
-table.displaytag th.order2 a {
-	background-image: url(../images/up-arrow.png);
-}
-
 .checklist {
     border: 1px solid #ccc;
     list-style: none;    
@@ -297,3 +233,4 @@ table.adminMenu td
 .login-panel {
 	margin-top: 10%;
 }
+

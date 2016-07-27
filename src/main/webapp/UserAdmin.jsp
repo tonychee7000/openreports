@@ -29,6 +29,7 @@
     		</em>
     	</a>
     </li>
+
     <s:if test="user.alertUser">
     <li role="presentation">
     	<a href="#alerts" aria-controls="alerts" role="tab" data-toggle="tab">
@@ -37,7 +38,7 @@
     		</em>
     	</a>
     </li>
-    </s:if>
+  	</s:if>
   </ul>            
   <div class="tab-content">
   
@@ -78,12 +79,13 @@
   				placeholder="<s:text name="label.email"/>"
   				>
     	</div>
-    	<s:if test="#session.user.dashboardUser">  
+
+    	<s:if test="#session.user.dashboardUser">
     	    <div class="form-group input-group">
     	    	<span class="input-group-addon">
   					<i class="fa fa-dashboard fa-fw"></i>
   				</span>
-  				<select name="reportId">    
+  				<select name="reportId" class="form-control">    
     	    		<option disabled="disabled"><s:text name="label.dashboardReport"/></option>
    	      			<option value="-1">(None)</option>     
           			<s:iterator id="report" value="reports">
@@ -91,7 +93,7 @@
           			</s:iterator>
         		</select>
     	    </div>
-   	  	</s:if>  
+   	  	</s:if>
     	<div class="form-group input-group">
     		<input class="btn btn-primary" type="submit" name="submitType" value="<s:text name="button.save"/>">  
     	</div>   	  	
@@ -99,19 +101,17 @@
     </form>  
     
     </div>
-  
+
     <s:if test="user.alertUser">   
-  
+
     <div id="alerts" role="tabpanel" class="tab-pane"> 
-    	<div class="form-group input-group"></div>
-    	<div class="form-group input-group"></div>
-    <table class="dialog">
+    <table class="table table-striped">
       <tr>
-        <td class="boldText" colspan="2"><s:text name="label.alert"/></td>
-        <td class="boldText"><s:text name="label.operator"/>&nbsp;</td>     
-        <td class="boldText"><s:text name="label.limit"/></td>     
-        <td class="boldText"><s:text name="label.report"/></td>   
-        <td class="boldText" colspan="2">&nbsp;</td>
+        <th colspan="2"><s:text name="label.alert"/></th>
+        <th><s:text name="label.operator"/>&nbsp;</th>     
+        <th><s:text name="label.limit"/></th>     
+        <th><s:text name="label.report"/></th>   
+        <th colspan="2">&nbsp;</th>
       </tr>      
       <s:iterator id="alert" value="user.alerts" status="iteratorStatus">
       <form action="userAdminAlerts.action" class="alert-form" >
@@ -120,17 +120,17 @@
    	      <s:property value="alert.name"/>   	       	
    	    </td>     	     	      	  
    	    <td>
-   	      <select name="alertOperator">        	   
+   	      <select name="alertOperator" class="form-control">        	   
            <s:iterator id="aOperator" value="operators">
            	<option value="<s:property/>" <s:if test="#aOperator.equals(#alert.operator)">selected="selected"</s:if> /><s:property/>
            </s:iterator>
           </select>   	    
    	    </td>  
    	    <td>
-   	      <input type="text" size="6" name="alertLimit" value="<s:property value="limit"/>">   	    
+   	      <input class="form-control" type="text" size="6" name="alertLimit" value="<s:property value="limit"/>">   	    
    	    </td>  
    	    <td>
-   	      <select name="reportId">    
+   	      <select name="reportId" class="form-control">    
    	      <option value="-1"> -- None -- </option>    
    	       <s:iterator id="report" value="reports">
            <option value="<s:property value="id"/>" <s:if test="id == report.id">selected="selected"</s:if> /><s:property value="name"/>
@@ -138,10 +138,10 @@
           </select>   	    
    	    </td>  
    	    <td class="dialogButtons">
-   	  	 <input class="standardButton" type="submit" name="submitUpdate" value="<s:text name="button.update"/>">
+   	  	 <input class="btn btn-success" type="submit" name="submitUpdate" value="<s:text name="button.update"/>">
    	    </td> 
    	    <td class="dialogButtons">
-   	  	 <input class="standardButton" type="submit" name="submitDelete" value="<s:text name="button.delete"/>">
+   	  	 <input class="btn btn-danger" type="submit" name="submitDelete" value="<s:text name="button.delete"/>">
    	    </td> 
       </tr>   
       <input type="hidden" name="id" value="<s:property value="id"/>">
@@ -151,24 +151,24 @@
     <form action="userAdminAlerts.action" class="alert-form">          
     <tr class="a">
       <td colspan="2">
-        <select name="alertId">  
+        <select name="alertId" class="form-control">  
            <s:iterator id="alert" value="alerts">             
             <option value="<s:property value="id"/>"><s:property value="name"/></option>
           </s:iterator>
         </select>
       </td>   
       <td>
-   	      <select name="alertOperator">         
+   	      <select name="alertOperator" class="form-control">         
           <s:iterator id="operator" value="operators">       
           <option value="<s:property value="operator"/>"><s:property value="operator"/> &nbsp;</option>
           </s:iterator>
         </select>   	    
    	  </td>  
    	  <td>
-   	    <input type="text" size="6" name="alertLimit" value="0">   	    
+   	    <input type="text" size="6" name="alertLimit" value="0" class="form-control">   	    
    	  </td>  
    	  <td>
-   	     <select name="reportId">    
+   	     <select name="reportId" class="form-control">    
    	      <option value="-1">(None)</option>     
           <s:iterator id="report" value="reports">
           <option value="<s:property value="id"/>"/><s:property value="name"/>
@@ -176,7 +176,7 @@
         </select>   	    
    	  </td>     
       <td class="dialogButtons">
-      	<input class="standardButton" type="submit" name="submitAdd" value="<s:text name="button.add"/>">
+      	<input class="btn btn-primary" type="submit" name="submitAdd" value="<s:text name="button.add"/>">
       </td>             
     </tr> 
   	<input type="hidden" name="id" value="<s:property value="id"/>"> 
@@ -186,9 +186,9 @@
     </table>
   
     </div>
-  
+ 
     </s:if>
-  
+
   </div>
   
 </div>

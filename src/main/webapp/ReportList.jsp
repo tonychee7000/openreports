@@ -6,23 +6,27 @@
 
 <s:actionerror/> 
 
-<div align="center">  
+<div>  
 
-  <a class="back-link img-group-small" href="reportGroup.action"><s:text name="link.back.groups"/></a>	
+  <a class="back-link" href="reportGroup.action">
+  	<i class="fa fa-reply fa-fw"> </i>
+  	<s:text name="link.back.groups"/>
+  </a>	
   
   <br/>
 
-  <div class="img-report important" id="instructions">
-  	<s:text name="reportList.title"/>
-  </div>  
+  <div class="important" id="instructions">
+  	<i class="fa fa-list-alt fa-fw"></i>
+  	<s:text name="reportGroup.title"/>
+  </div>
   
   <s:set name="reports" value="reports" scope="request" /> 
-  
-   <display:table name="reports" class="displayTag" sort="list" requestURI="reportList.action" >                  
+  <div class="container">
+   <display:table name="reports" class="displaytag table table-striped" sort="list" requestURI="reportList.action" >                  
     <display:column property="name" titleKey="label.name" href="reportDetail.action" paramId="reportId" paramProperty="id" sortable="true" headerClass="sortable"/>        
     <display:column property="description" titleKey="label.description" sortable="true" headerClass="sortable"/>              
-  </display:table> 
-  
+   </display:table> 
+  </div>
   <br>
   
 </div>
