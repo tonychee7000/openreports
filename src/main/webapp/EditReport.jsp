@@ -8,10 +8,6 @@
 <script type="text/javascript" src="js/add-chart.js"></script>
 <script type="text/javascript" src="js/add-parameter.js"></script>
 
-<script type="text/javascript">
-  var editReportTabs = new YAHOO.widget.TabView("editReportTabs");  
-</script>
-
 <div align="center">
   
   <a class="back-link" href="listReports.action">
