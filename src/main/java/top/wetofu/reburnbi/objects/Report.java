@@ -22,6 +22,7 @@ package top.wetofu.reburnbi.objects;
 import java.io.Serializable;
 import java.util.*;
 
+
 public class Report implements Comparable<Report>, Serializable
 {
 	private static final long serialVersionUID = 4068258161793785996l;

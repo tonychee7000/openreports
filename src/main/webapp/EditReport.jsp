@@ -49,7 +49,7 @@
       
       <div id="tab1" role="tabpanel" class="tab-pane <s:if test="selectedTab == 1">active</s:if>">     
       
-      <form action="editReport.action" method="post">
+      <form action="editReport.action" method="post" accept-charset="UTF-8">
       <table>    
         <tr class="a">
           <td class="boldText"><s:text name="label.name"/></td>

@@ -27,6 +27,7 @@ import java.util.Map;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
+import org.apache.log4j.Logger;
 import org.apache.struts2.interceptor.SessionAware;
 import top.wetofu.reburnbi.ORStatics;
 import top.wetofu.reburnbi.objects.ORTag;
@@ -77,7 +78,7 @@ public class EditGroupAction extends ActionSupport  implements SessionAware
 				name = reportGroup.getName();
 				description = reportGroup.getDescription();
                 tags = tagProvider.getTagsForObject(reportGroup.getId(), ReportGroup.class, ORTag.TAG_TYPE_UI);                
-                reportIds = null;                  
+                reportIds = null;
 			}
 
             tagList = tagProvider.getTagList(ReportGroup.class, ORTag.TAG_TYPE_UI);
@@ -98,6 +99,7 @@ public class EditGroupAction extends ActionSupport  implements SessionAware
 			reportGroup.setName(name);
 			reportGroup.setDescription(description);
 			reportGroup.setReports(convertIdsToReports(reportIds));
+			
             
 			if (command.equals("edit"))
 			{

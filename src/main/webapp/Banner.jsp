@@ -1,12 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("utf-8"); %>
+<% response.setCharacterEncoding("utf-8");%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <!DOCTYPE html>
 <html lang="zh-cn">
 
 <head>
+  <jsp:directive.page contentType="text/html; charset=UTF-8" /> 
+  
   <meta HTTP-EQUIV="Pragma" CONTENT="public">
   <meta HTTP-EQUIV="Cache-Control" CONTENT="max-age=0">
+  
   <meta charset="utf-8">
   <title><s:text name="application.title"/></title>
   <link rel="stylesheet" type="text/css" href="css/yui/reset-fonts-grids.css" />
